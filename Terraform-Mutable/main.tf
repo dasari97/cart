@@ -6,4 +6,6 @@ module "cart" {
     instance_type = var.instance_type
     component   = "cart"
     port        = 8080
+    is_internal = "true"
+    priority    = 200
 }
