@@ -5,4 +5,5 @@ module "cart" {
     od_ins = var.od_ins
     instance_type = var.instance_type
     component   = "cart"
+    port        = 8080
 }
