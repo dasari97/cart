@@ -59,7 +59,7 @@ app.get('/metrics', (req, res) => {
 });
 
 
-// get cart with id
+// get cart with ids
 app.get('/cart/:id', (req, res) => {
     redisClient.get(req.params.id, (err, data) => {
         if(err) {
