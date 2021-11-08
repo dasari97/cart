@@ -24,5 +24,19 @@ stages:
       - script : |
           echo "Code Quality is Good"
         displayName: 'Result stage'
-
-
+  
+  - stage: TestingStage
+    displayName : 'Code Test Stage'
+    jobs:
+    - job: UnitTestStage
+      displayName: 'Submitting the code for Unit tests'
+      steps: 
+      - script : |
+          echo "Code test passed."
+        displayName : 'Unit test Stage'
+    - job: LintCheckStage
+      displayName : 'Code Lint checking stage'
+      steps:
+      - script : |
+          echo "Code lint is Good"
+        displayName: 'Lint check stage'
