@@ -20,6 +20,10 @@ stages:
         displayName : User and OS details
       - script : echo Hello
         displayName : Hello Msg
+    - job: S1J2
+      displayName: s1j2
+      steps :
+        - script : ls -a
     
   - stage: Stage2
     displayName : Stage2
