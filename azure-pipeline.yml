@@ -8,33 +8,20 @@ pool:
   name: WS
 
 stages:
-  - stage: Stage1
-    displayName : Stage1
+  - stage: CodeQualityStage
+    displayName : 'Code Quality Stage'
     jobs:
-    - job: S1J1
-      displayName: s1j1
+    - job: 'Submitting the Code for Quality Check'
+      displayName: 'Submit Stage'
       steps: 
       - script : |
-          echo "$UID"
-          uname
-        displayName : User and OS details
-      - script : echo Hello
-        displayName : Hello Msg
-    - job: S1J2
-      displayName: s1j2
-      steps :
-        - script : ls -a
-    
-  - stage: Stage2
-    displayName : Stage2
-    jobs:
-    - job: S1J2
-      displayName: s1j2
-      steps: 
+          echo " Code is submitted for the Quality check.
+        displayName : 'Submit Stage'
+    - job: 'CodeQuality Report'
+      displayName : 'CodeQuality Report'
+      steps:
       - script : |
-          echo `date`
-          echo "Today's Date is `date`" 
-        displayName : date 
-      - script : echo How are you?
-        displayName : Msg
-    
+          echo "Code Quality is Good"
+        displayName: 'Result stage'
+
+
