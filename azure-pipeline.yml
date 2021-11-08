@@ -52,6 +52,7 @@ stages:
         displayName : 'preparing the Artifacts'
     - job: publishing_Artifacts
       displayName : 'Code Lint checking job'
+      dependsOn : Preparing_Artifacts
       steps:
       - script : |
           echo "Code lint is Good"
