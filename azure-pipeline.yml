@@ -15,10 +15,11 @@ stages:
       displayName: 'Submitting the code for Quality check'
       steps: 
       - script : |
-          echo " Code is submitted for the Quality check.
+          echo " Code is submitted for the Quality check."
         displayName : 'Submit Stage'
     - job: CodeQualityReport
       displayName : 'CodeQuality Report'
+      dependsOn : SubmitStage
       steps:
       - script : |
           echo "Code Quality is Good"
