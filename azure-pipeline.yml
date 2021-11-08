@@ -11,13 +11,13 @@ stages:
   - stage: CodeQualityStage
     displayName : 'Code Quality Stage'
     jobs:
-    - job: 'Submitting the Code for Quality Check'
-      displayName: 'Submit Stage'
+    - job: SubmitStage
+      displayName: 'Submitting the code for Quality check'
       steps: 
       - script : |
           echo " Code is submitted for the Quality check.
         displayName : 'Submit Stage'
-    - job: 'CodeQuality Report'
+    - job: CodeQualityReport
       displayName : 'CodeQuality Report'
       steps:
       - script : |
