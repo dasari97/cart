@@ -7,10 +7,30 @@ trigger:
 pool:
   name: WS
 
-steps:
-- script: echo Hello, world!
-  displayName: 'Run a one-line script'
-
-- script: |
-    uname -a
-
+stages:
+  - stage: Stage1
+    displayName : Stage1
+    jobs:
+    - job: S1J1
+      displayName: s1j1
+      steps: 
+      - script : |
+          echo "$UID"
+          uname
+        displayName : User and OS details
+      - script : echo Hello
+        displayName : Hello Msg
+    
+  - stage: Stage2
+    displayName : Stage2
+    jobs:
+    - job: S1J2
+      displayName: s1j2
+      steps: 
+      - script : |
+          echo `date`
+          echo "Today's Date is `date`" 
+        displayName : date 
+      - script : echo How are you?
+        displayName : Msg
+    
