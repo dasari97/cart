@@ -12,31 +12,47 @@ stages:
     displayName : 'Code Quality Stage'
     jobs:
     - job: SubmitStage
-      displayName: 'Submitting the code for Quality check'
+      displayName: 'Job to submit code for  Quality check'
       steps: 
       - script : |
           echo " Code is submitted for the Quality check."
-        displayName : 'Submit Stage'
+        displayName : 'Submited code'
     - job: CodeQualityReport
-      displayName : 'CodeQuality Report'
+      displayName : 'CodeQuality Report Job'
       dependsOn : SubmitStage
       steps:
       - script : |
           echo "Code Quality is Good"
-        displayName: 'Result stage'
+        displayName: 'Result'
   
   - stage: TestingStage
     displayName : 'Code Test Stage'
     jobs:
     - job: UnitTestStage
-      displayName: 'Submitting the code for Unit tests'
+      displayName: 'job to do Unit tests'
       steps: 
       - script : |
           echo "Code test passed."
-        displayName : 'Unit test Stage'
+        displayName : 'Unit test'
     - job: LintCheckStage
-      displayName : 'Code Lint checking stage'
+      displayName : 'Code Lint checking Job'
       steps:
       - script : |
           echo "Code lint is Good"
-        displayName: 'Lint check stage'
+        displayName: 'Lint checking'
+        
+  - stage: ArtifactsStage
+    displayName : 'Artifacts Stage'
+    jobs:
+    - job: Preparing_Artifacts
+      displayName: 'preparing the Artifacts Job'
+      steps: 
+      - script : |
+          echo "Code test passed."
+        displayName : 'preparing the Artifacts'
+    - job: publishing_Artifacts
+      displayName : 'Code Lint checking job'
+      steps:
+      - script : |
+          echo "Code lint is Good"
+        displayName: 'Publishing Artifacts'
