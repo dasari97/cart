@@ -54,7 +54,7 @@ stages:
           cp -r node_modules server.js $(Build.BinariesDirectory)/.
         displayName : 'preparing the Artifacts'
     - job: publishing_Artifacts
-      displayName : 'Code Lint checking job'
+      displayName : 'Publsihing Artifacts Job'
       dependsOn : Preparing_Artifacts
       steps:
       - script : |
