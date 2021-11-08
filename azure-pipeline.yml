@@ -43,17 +43,21 @@ stages:
         
   - stage: ArtifactsStage
     displayName : 'Artifacts Stage'
+    condition: and(succeeded(), startsWith(variables['Build.SourceBranch'], 'refs/tags/'))
     jobs:
     - job: Preparing_Artifacts
       displayName: 'preparing the Artifacts Job'
       steps: 
       - script : |
-          echo "Code test passed."
+          env
+          npm install
+          cp -r node_modules server.js $(Build.BinariesDirectory)/.
         displayName : 'preparing the Artifacts'
     - job: publishing_Artifacts
       displayName : 'Code Lint checking job'
       dependsOn : Preparing_Artifacts
       steps:
       - script : |
-          echo "Code lint is Good"
+          cd $(Build.BinariesDirectory)
+          az artifacts universal publish --organization https://dev.azure.com/dasarisaikrishna97/ --project="Roboshop" --scope project --feed WS --name cart --version ${BUILD_SOURCEBRANCHNAME} --description "Welcome to Universal Packages" --path .
         displayName: 'Publishing Artifacts'
