@@ -20,6 +20,6 @@ stages:
 - stage: CodeQuality Stage
   displayName: 'Checking the Code Quailty Stage'
   jobs:
-  - template: "codeCheck.yml@azureCI"
+  - template: "codecheck.yml@azureCI"
   
   
