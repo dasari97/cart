@@ -10,7 +10,9 @@ pool:
 resources:
   repositories:
   - repository: AZ-CI
-  
+    type: git
+    name: AZ-CI
+    
 stages: 
 - stage: CodeQuality Stage
   displayName: 'Checking the Code Quailty Stage'
