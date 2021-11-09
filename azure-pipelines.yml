@@ -15,4 +15,4 @@ stages:
 - stage: CodeQuality Stage
   displayName: 'Checking the Code Quailty Stage'
   jobs:
-  - templates: codeCheck.yml@AZ
+  - template: codeCheck.yml@AZ
