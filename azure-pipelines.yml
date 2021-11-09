@@ -17,9 +17,6 @@ variables:
   COMPONENT: cart
     
 stages: 
-- stage: CodeQuality Stage
-  displayName: 'Checking the Code Quailty Stage'
-  jobs:
-  - template: "codecheck.yml@azureCI"
+- template: "codecheck.yml@azureCI"
   
   
