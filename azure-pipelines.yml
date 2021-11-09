@@ -11,7 +11,7 @@ resources:
   repositories:
   - repository: AZ-CI
     type: git
-    name: AZ-CI
+    name: roboshop/AZ-CI
     
 stages: 
 - stage: CodeQuality Stage
