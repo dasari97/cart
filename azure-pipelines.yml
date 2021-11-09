@@ -14,7 +14,7 @@ resources:
     name: azureCI
     
 variables:
-  COMPONENT: catalogue
+  COMPONENT: cart
     
 stages: 
 - template: "codecheck.yml@azureCI"
