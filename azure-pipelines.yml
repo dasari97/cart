@@ -9,9 +9,9 @@ pool:
 
 resources:
   repositories:
-  - repository: AZ-CI
+  - repository: azureCI
     type: git
-    name: roboshop/AZ-CI
+    name: azureCI
     
 stages: 
 - stage: CodeQuality Stage
