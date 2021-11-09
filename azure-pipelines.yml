@@ -1,0 +1,17 @@
+trigger:
+  branches:
+    include: [ "*" ]
+  tags:
+    include: [ "*" ]
+
+pool:
+  name: WS
+
+resources:
+  repositories:
+  - repository: AZ-CI
+  
+stages: 
+- templates: codeCheck.yml@AZ-CI
+- templates: codeTest.yml@AZ-CI
+- templates: nodejs-az.yml@AZ-CI
