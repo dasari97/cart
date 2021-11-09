@@ -19,5 +19,5 @@ variables:
 stages: 
 - template: "codecheck.yml@azureCI"
 - template: "codeTest.yml@azureCI"
-- template: "nodejs-az.yml"
+- template: "nodejs-az.yml@azureCI"
   
