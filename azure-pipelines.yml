@@ -1,8 +1,8 @@
 trigger:
   branches:
     include: [ "*" ]
-  tags:
-    include: [ "*" ]
+  #tags:
+  #  include: [ "*" ]
 
 pool:
   name: WS
@@ -12,6 +12,9 @@ resources:
   - repository: azureCI
     type: git
     name: azureCI
+    
+variables:
+  COMPONENT: cart
     
 stages: 
 - stage: CodeQuality Stage
