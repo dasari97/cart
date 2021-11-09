@@ -12,6 +12,7 @@ resources:
   - repository: AZ-CI
   
 stages: 
-- templates: codeCheck.yml@AZ-CI
-- templates: codeTest.yml@AZ-CI
-- templates: nodejs-az.yml@AZ-CI
+- stage: CodeQuality Stage
+  displayName: 'Checking the Code Quailty Stage'
+  jobs:
+  - templates: codeCheck.yml@AZ
