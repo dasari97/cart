@@ -1,5 +1,5 @@
 module "cart" {
-    source = "git::https://dasarisaikrishna97@dev.azure.com/dasarisaikrishna97/Roboshop/_git/immutable"
+    source = "git::https://dasarisaikrishna97@dev.azure.com/dasarisaikrishna97/Roboshop/_git/immutable//APP-module"
     env = var.env
     instance_type = var.instance_type
     component   = "cart"
