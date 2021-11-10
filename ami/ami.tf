@@ -14,9 +14,7 @@ module "cart" {
     source = "git::https://dasarisaikrishna97@dev.azure.com/dasarisaikrishna97/Roboshop/_git/terraform-ami"
     component   = "cart"
     APP_VERSION = var.APP_VERSION
-    PAT         = jsondecode(data.aws_secretsmanager_secret_version.Dev_secret.secret_string)["PAT"]
 }
 
 
 variable "APP_VERSION" {}
-variable "PAT" {}
