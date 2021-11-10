@@ -14,7 +14,6 @@ module "cart" {
     source = "git::https://dasarisaikrishna97@dev.azure.com/dasarisaikrishna97/Roboshop/_git/terraform-ami"
     component   = "cart"
     APP_VERSION = var.APP_VERSION
-    PAT         = var.PAT
 }
 
 variable "APP_VERSION" {}
