@@ -16,4 +16,5 @@ module "cart" {
     APP_VERSION = var.APP_VERSION
 }
 
+
 variable "APP_VERSION" {}
