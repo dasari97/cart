@@ -2,10 +2,12 @@ provider "aws" {
     region = "us-east-1"
 }
 
-backend "s3" {
+terraform {
+ backend "s3" {
     bucket = "dasari1998"
     key    = "ami/cart/dev/dev_state_file_backup"
     region = "us-east-1"
+    }
 }
 
 module "cart" {
