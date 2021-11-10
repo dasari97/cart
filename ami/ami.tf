@@ -10,7 +10,7 @@ terraform {
     }
 }
 
-module "cart" {
+module "ami" {
     source = "git::https://dasarisaikrishna97@dev.azure.com/dasarisaikrishna97/Roboshop/_git/terraform-ami"
     component   = "cart"
     APP_VERSION = var.APP_VERSION
