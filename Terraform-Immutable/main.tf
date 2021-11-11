@@ -7,4 +7,7 @@ module "cart" {
     is_internal = "true"
     priority    = 200
     APP_VERSION = var.APP_VERSION
+    max_size    = var.max_size
+    min_size    = var.min_size
+    desired_capacity    = var.desired_capacity
 }
