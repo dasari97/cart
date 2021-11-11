@@ -4,7 +4,7 @@ module "cart" {
     instance_type = var.instance_type
     component   = "cart"
     port        = 8080
-#    is_internal = "true"
-#    priority    = 200
+    is_internal = "true"
+    priority    = 200
     APP_VERSION = var.APP_VERSION
 }
